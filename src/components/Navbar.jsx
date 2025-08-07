@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react"
-import PromoBar from "./PromoBar"
+// import PromoBar from "./promoBar"
 import SearchBar from "./SearchBar"
 import { NavLink, useLocation, Link } from "react-router-dom"
 import { useCart } from "../context/CartContext"
@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const location = useLocation()
-  const { totalItemsInCart, toggleCartSidebar } = useCart() // toggleCartSidebar import karein
+  const { totalItemsInCart, toggleCartSidebar } = useCart() 
 
   console.log("Navbar: totalItemsInCart is", totalItemsInCart)
 
@@ -47,8 +47,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Promo Bar */}
-      <PromoBar />
+      {/* Promo Bar
+      <PromoBar /> */}
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center min-h-16">
